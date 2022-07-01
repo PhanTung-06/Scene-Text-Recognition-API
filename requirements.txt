@@ -6,7 +6,6 @@ yacs
 cython
 matplotlib
 tqdm
-opencv-python
 shapely
 scipy
 tensorboardX
