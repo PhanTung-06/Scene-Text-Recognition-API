@@ -5,6 +5,7 @@ RUN git clone https://github.com/PhanTung-06/Scene-Text-Recognition-API.git
 WORKDIR /root/Scene-Text-Recognition-API
 
 RUN pip install -r requirements.txt
+RUN pip install opencv-contrib-python
 RUN pip install detectron2==0.2 -f  https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.4/index.html
 
 RUN pip install dict-trie
