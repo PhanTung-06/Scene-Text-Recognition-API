@@ -25,7 +25,7 @@ async def index(request: Request):
 
 @app.post("/", response_class=HTMLResponse)
 async def create_upload_files(request: Request, image: UploadFile = File(...)):
-    with open("./static/images/test.jpg", "wb") as buffer:
+    with open("/static/images/test.jpg", "wb") as buffer:
         shutil.copyfileobj(image.file, buffer)
 
     url_model = "https://drive.google.com/file/d/15AI1jK6jQkxClQoClohajXW_CjtYBWYl/view?usp=sharing"
