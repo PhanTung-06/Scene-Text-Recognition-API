@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  app:
+    container_name: FastAPI
+    build: .
+    ports:
+      - "8000:8000"
+    command: uvicorn app:app --reload --host 0.0.0.0 --port 8000
