@@ -1,6 +1,8 @@
 uvicorn
 jinja2
 fastapi
+python-multipart
+opencv-python
 ninja
 yacs
 cython
