@@ -11,7 +11,8 @@ RUN pip install detectron2==0.2 -f  https://dl.fbaipublicfiles.com/detectron2/wh
 RUN pip install dict-trie
 RUN python setup.py install
 RUN python setup.py build develop
-
+RUN pip install opencv-python
+RUN pip install python-multipart
 
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
