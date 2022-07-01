@@ -14,6 +14,7 @@ RUN python setup.py build develop
 RUN pip install opencv-python
 RUN pip install python-multipart
 
+RUN gdown --id 15AI1jK6jQkxClQoClohajXW_CjtYBWYl
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
