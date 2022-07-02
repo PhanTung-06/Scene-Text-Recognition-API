@@ -28,7 +28,7 @@ async def create_upload_files(request: Request, image: UploadFile = File(...)):
     with open("./static/images/test.jpg", "wb") as buffer:
         shutil.copyfileobj(image.file, buffer)
 
-    url_model = "https://drive.google.com/file/d/15AI1jK6jQkxClQoClohajXW_CjtYBWYl/view?usp=sharing"
+    url_model = "https://drive.google.com/u/0/uc?id=15AI1jK6jQkxClQoClohajXW_CjtYBWYl&export=download"
     output = "trained_model.pth"
     gdown.download(url_model, output)
 
