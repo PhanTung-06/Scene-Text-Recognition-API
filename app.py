@@ -32,7 +32,7 @@ async def create_upload_files(request: Request, image: UploadFile = File(...)):
     output = "trained_model.pth"
     gdown.download(url_model, output)
 
-    detector = Detector('configs/BAText/VinText/attn_R_50.yaml','trained_model.pth')
+    detector = Detector('./configs/BAText/VinText/attn_R_50.yaml','./trained_model.pth')
     img = read_image('./static/images/test.jpg', format='BGR')
     prediction, vis = detector.predict(img)
     vis.save("./static/images/output.jpg")
