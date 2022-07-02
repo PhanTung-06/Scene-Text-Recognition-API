@@ -10,6 +10,10 @@ import gdown
 from utils.detector import Detector
 from detectron2.data.detection_utils import read_image
 
+url_model = "https://drive.google.com/u/0/uc?id=15AI1jK6jQkxClQoClohajXW_CjtYBWYl&export=download"
+output = "trained_model.pth"
+gdown.download(url_model, output)
+
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -27,11 +31,6 @@ async def index(request: Request):
 async def create_upload_files(request: Request, image: UploadFile = File(...)):
     with open("./static/images/test.jpg", "wb") as buffer:
         shutil.copyfileobj(image.file, buffer)
-
-    url_model = "https://drive.google.com/u/0/uc?id=15AI1jK6jQkxClQoClohajXW_CjtYBWYl&export=download"
-    output = "trained_model.pth"
-    gdown.download(url_model, output)
-
     detector = Detector('./configs/BAText/VinText/attn_R_50.yaml','./trained_model.pth')
     img = read_image('./static/images/test.jpg', format='BGR')
     prediction, vis = detector.predict(img)
