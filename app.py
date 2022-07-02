@@ -6,6 +6,9 @@ from fastapi.templating import Jinja2Templates
 
 import shutil
 import gdown 
+import torch
+
+torch.cuda.is_available()
 
 from utils.detector import Detector
 from detectron2.data.detection_utils import read_image
