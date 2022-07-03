@@ -8,7 +8,16 @@ import shutil
 import gdown 
 import torch
 
-torch.cuda.is_available()
+print(torch.cuda.is_available())
+
+print(torch.backends.cudnn.enabled)
+
+print('torch: ',torch.version)
+
+print('torch cuda: ',torch.version.cuda)
+
+print(torch.backends.cudnn.version())
+
 
 from utils.detector import Detector
 from detectron2.data.detection_utils import read_image
