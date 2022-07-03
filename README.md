@@ -11,8 +11,8 @@
 ## Getting Started
 <a name='api'></a>
 
-- Requirements: 
-	Docker
+- Requirements:  
+	Docker  
 	Docker-compose
 
 - Install:
