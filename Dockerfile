@@ -1,5 +1,3 @@
-ARG CUDA="10.1"
-ARG CUDNN="7"
 
 # FROM floydhub/pytorch:1.5.0-gpu.cuda10cudnn7-py3.55
 FROM pytorch/pytorch:1.4-cuda10.1-cudnn7-devel
@@ -25,6 +23,5 @@ RUN python3 setup.py build develop
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
-EXPOSE 8000:8000
-CMD ["uvicorn", "app:app"]
-
+# EXPOSE 8000:8000
+# CMD ["uvicorn", "app:app", "--reload"]:a
