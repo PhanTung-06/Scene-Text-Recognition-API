@@ -13,8 +13,8 @@ WORKDIR /workspace/Scene-Text-Recognition-API
 RUN pip install -r requirements.txt
 RUN pip install detectron2==0.2 -f  https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.4/index.html
 RUN pip install dict-trie
-RUN python3 setup.py install
-RUN python3 setup.py build develop
+RUN python setup.py install
+RUN python setup.py build develop
 
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility

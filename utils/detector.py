@@ -19,7 +19,7 @@ class Detector:
         self.cfg = get_cfg()
         self.cfg.merge_from_file(cfg_path)
         self.metadata = MetadataCatalog.get(self.cfg.DATASETS.TEST[0] if len(self.cfg.DATASETS.TEST) else "__unused")
-        self.cfg.merge_from_list(model_weight_path)
+        self.cfg.MODEL.WEIGHTS = model_weight_path
         self.cfg.MODEL.RETINANET.SCORE_THRESH_TEST = 0.5
         self.cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
         self.cfg.MODEL.FCOS.INFERENCE_TH_TEST = 0.5
