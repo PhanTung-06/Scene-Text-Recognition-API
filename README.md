@@ -1,13 +1,15 @@
 ##### Table of Content
 
-1. [Introduction](#dictionary-guided-scene-text-recognition)
+1. [Introduction](#intro)
 2. [Getting Started](#api)
 
-#dictionary-guided-scene-text-recognition
+## Introduction 
+<a name='intro'></a>
 
 - We follow Dictionary-guided Scene Text Recognition paper[https://www3.cs.stonybrook.edu/~minhhoai/papers/vintext_CVPR21.pdf]
 
-#api
+## Getting Started
+<a name='api'></a>
 
 - Requirements: Docker, Docker-compose
 
