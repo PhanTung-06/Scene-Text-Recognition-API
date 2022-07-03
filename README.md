@@ -6,12 +6,14 @@
 ## Introduction 
 <a name='intro'></a>
 
-- We follow Dictionary-guided Scene Text Recognition paper[https://www3.cs.stonybrook.edu/~minhhoai/papers/vintext_CVPR21.pdf]
+- We follow Dictionary-guided Scene Text Recognition [paper](https://www3.cs.stonybrook.edu/~minhhoai/papers/vintext_CVPR21.pdf)
 
 ## Getting Started
 <a name='api'></a>
 
-- Requirements: Docker, Docker-compose
+- Requirements: 
+	Docker
+	Docker-compose
 
 - Install:
 ```sh
