@@ -5,17 +5,18 @@ RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/machi
 
 RUN apt-get update \
  && apt-get install -y wget htop byobu git gcc g++ libgl1-mesa-glx libgtk2.0-0 libsm6 libxext6
- 
+
 WORKDIR /workspace
 RUN git clone https://github.com/PhanTung-06/Scene-Text-Recognition-API.git
 WORKDIR /workspace/Scene-Text-Recognition-API
  
-RUN pip install -r requirements.txt
+
+RUN pip install ninja yacs cython matplotlib tqdm opencv-python shapely scipy tensorboardX pyclipper Polygon3 weighted-levenshtein editdistance
 RUN pip install detectron2==0.2 -f  https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.4/index.html
 RUN pip install dict-trie
 RUN python setup.py install
 RUN python setup.py build develop
-
+RUN pip install -r requirements.txt
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
