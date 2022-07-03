@@ -25,4 +25,6 @@ RUN python3 setup.py build develop
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
+EXPOSE 8000:8000
+CMD ["uvicorn", "app:app"]
 
