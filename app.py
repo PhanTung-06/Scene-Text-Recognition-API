@@ -15,22 +15,20 @@ from detectron2.data.detection_utils import read_image
 url_model = "https://drive.google.com/u/0/uc?id=15AI1jK6jQkxClQoClohajXW_CjtYBWYl&export=download"
 output = "trained_model.pth"
 gdown.download(url_model, output)
+
 detector = Detector('./configs/BAText/VinText/attn_R_50.yaml','./trained_model.pth')
-# img = read_image('./static/images/test.jpg', format='BGR')
-# prediction, vis = detector.predict(img)
-# vis.save("./static/images/output.jpg")
 
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
+
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
     return templates.TemplateResponse("index.html", {
         "request": request
     })
-
 
 
 @app.post("/", response_class=HTMLResponse)
