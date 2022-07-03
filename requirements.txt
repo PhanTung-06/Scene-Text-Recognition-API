@@ -2,3 +2,4 @@ uvicorn
 jinja2
 fastapi
 gdown
+python-multipart
