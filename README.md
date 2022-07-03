@@ -12,8 +12,9 @@
 <a name='api'></a>
 
 - Requirements:  
-	Docker  
-	Docker-compose
+	+ Docker  
+	+ Docker-compose
+	+ FastAPI
 
 - Install:
 ```sh
