@@ -13,8 +13,9 @@
 
 - Requirements:  
 	+ Docker  
-	+ Docker-compose
 	+ FastAPI
+	+ Cuda==10.1
+	+ torch==1.4.0
 
 - Install:
 ```sh
