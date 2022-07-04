@@ -22,6 +22,6 @@ RUN pip install -r requirements.txt
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 
-EXPOSE $PORT
-CMD gunicorn -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT app:app
+# EXPOSE $PORT
+# CMD gunicorn -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT app:app
 # CMD ["uvicorn", "app:app", "--reload"]
