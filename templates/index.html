@@ -10,15 +10,21 @@
     <title>Scene Text Recognition</title>
 </head>
 <body>
-    <h1>WELLCOME!!! THIS IS AN API FOR SCENE TEXT RECOGNITION</h1>
+    <h2>WEB DEMO FOR SCENE TEXT RECOGNITION</h2>
+
     <div class="container">
-        <form action="/" enctype="multipart/form-data" method="post">
-            <div class="form-group">
-                <!-- <label for="exampleFormControlFile1">Upload image</label> -->
-                <input name="image" type="file" multiple>
-                <input type="submit">
+        <div class="row">
+            <div class="please">
+                <p>Please choose image</p>
             </div>
-        </form>
+            <form action="/" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <!-- <label for="exampleFormControlFile1">Upload image</label> -->
+                    <input name="image" type="file" multiple>
+                    <input class = "submit" type="submit">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

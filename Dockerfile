@@ -6,8 +6,6 @@ RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/machi
 RUN apt-get update \
  && apt-get install -y wget htop byobu git gcc g++ libgl1-mesa-glx libgtk2.0-0 libsm6 libxext6
 
-# RUN git clone https://github.com/PhanTung-06/Scene-Text-Recognition-API.git
-
 WORKDIR /workspace/
 COPY ./ /workspace
 
@@ -16,12 +14,7 @@ RUN pip install ninja yacs cython matplotlib tqdm opencv-python shapely scipy te
 RUN pip install detectron2==0.2 -f  https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.4/index.html
 RUN pip install dict-trie
 RUN python setup.py install
-# RUN python setup.py build develop
 RUN pip install -r requirements.txt
 
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
-
-# EXPOSE $PORT
-# CMD gunicorn -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT app:app
-# CMD ["uvicorn", "app:app", "--reload"]

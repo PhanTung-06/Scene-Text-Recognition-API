@@ -1,3 +1,4 @@
+from distutils.command.config import config
 import uvicorn
 from fastapi import FastAPI, Request, File, UploadFile, Form
 from fastapi.responses import HTMLResponse
@@ -17,6 +18,7 @@ from detectron2.data.detection_utils import read_image
 # gdown.download(url_model, output)
 
 detector = Detector('./configs/BAText/VinText/attn_R_50.yaml','./trained_model.pth')
+# detector = Detector('./config/BAText/TotalText/attn_R_50.yaml','model_tt_att.pth')
 
 app = FastAPI()
 
